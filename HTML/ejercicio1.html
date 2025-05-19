@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruleta Aleatoria</title>
+    <link rel="stylesheet" href="../CSS/ejercicio1.css">
+</head>
+<body>
+    <div class="contenedor" id="contenedorPrincipal">
+        <header>
+            <h1 class="titulo">Ruleta Aleatoria</h1>
+            <p class="subtitulo">Universidad Nacional del Centro del Perú - Facultad de Ingeniería de Sistemas</p>
+        </header>
+        
+        <div class="panel-principal">
+            <div class="panel-derecho">
+                <div class="seccion-ruleta">
+                    <h2>Ruleta de Sorteo</h2>
+                    <div class="contenedor-ruleta">
+                        <div class="marcador"></div>
+                        <canvas id="ruleta" class="ruleta" width="300" height="300"></canvas>
+                    </div>
+                    <div class="resultado" id="resultadoSorteo">
+                        Presiona "Iniciar Sorteo" o la tecla ESPACIO
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-izquierdo seccion-textarea">
+
+                <div class="controles">
+                    <button class="btn btn-primario" id="btnIniciar">Iniciar Sorteo</button>
+                    <button class="btn btn-secundario" id="btnReiniciar">Reiniciar</button>
+                    <button class="btn btn-acento" id="btnPantallaCompleta">Pantalla Completa</button>
+                </div>
+
+                <h2>Elementos para Sorteo</h2>
+                <p>Ingresa los elementos para la ruleta (uno por línea):</p>
+                <textarea class="texto-elementos" id="areaTexto" placeholder="Ingresa elementos aquí, uno por línea. Ejemplo:&#10;Elemento 1&#10;Elemento 2&#10;Elemento 3"></textarea>
+                
+                
+                
+                <div class="info-teclas">
+                    <strong>Teclas rápidas:</strong>
+                    <ul>
+                        <li><span class="tecla">ESPACIO</span> Iniciar sorteo</li>
+                        <li><span class="tecla">S</span> Resaltar último elemento sorteado y ocultarlo</li>
+                        <li><span class="tecla">E</span> Habilitar edición del área de texto</li>
+                        <li><span class="tecla">R</span> Reiniciar (mostrar todos los elementos)</li>
+                        <li><span class="tecla">F</span> Pantalla completa</li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+    
+    <script src="../JS/ejercicio1.js"></script>
+</body>
+</html>
