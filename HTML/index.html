@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sorteo de Equipos</title>
+    <link rel="stylesheet" href="../CSS/global.css">
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+<body>
+    <h1>Sorteo de Equipos</h1>
+    <div class="contenedor-flex">
+        <!-- Sección 1 -->
+        <section class="seccion seccion-1">
+            <h2>1. Ingresar a los participantes</h2>
+            <label for="participantes">Participantes (máx 100, 50 caracteres c/u):</label><br>
+            <textarea id="participantes" rows="10" cols="50" maxlength="5100" placeholder="Ingrese un participante por línea"></textarea>
+            <div id="contador"></div>
+        </section>
+        <div class="columna-derecha">
+            <!-- Sección 2 -->
+            <section class="seccion">
+                <h2>2. Cómo dividir</h2>
+                <label>
+                    <input type="checkbox" id="chkEquipos" checked>
+                    Cantidad de equipos
+                </label>
+                <input type="number" id="cantidadEquipos" min="1" placeholder="Cantidad de equipos" style="width:150px;">
+                <br>
+                <label>
+                    <input type="checkbox" id="chkPorEquipo">
+                    Participantes por equipo
+                </label>
+                <input type="number" id="cantidadPorEquipo" min="1" placeholder="Participantes por equipo" style="width:180px;" disabled>
+            </section>
+            <!-- Sección 3 -->
+            <section class="seccion">
+                <h2>3. Título</h2>
+                <input type="text" id="tituloEquipos" maxlength="50" placeholder="Título de los equipos">
+            </section>
+            <button id="generar">Generar</button>
+        </div>
+    </div>
+    <div id="resultados"></div>
+    <div id="acciones" style="display:none;">
+        <button id="descargarJPG">Descargar JPG</button>
+        <button id="copiarPortapapeles">Copiar al portapapeles</button>
+        <button id="copiarColumnas">Copiar equipos por columna</button>
+    </div>
+    <script src="../JS/prueba.js"></script>
+</body>
+</html>
